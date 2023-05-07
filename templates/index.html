@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Reviewer Sentiment Analysis</title>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/material-outlined/24/000000/quote.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="title-container">
+            <h1 class="title">Movie Reviewer Sentiment Analysis</h1>
+        </div>
+        <form method="post">
+            <div class="input-container">
+                <textarea name="text" class="text-area" rows="5" cols="80" placeholder="Input your review here..."></textarea>
+            </div>
+            <div class="button-container">
+                <input type="submit" class="submit-button"></input>
+            </div>
+        </form>
+        {% if prediction and text %}
+            <div class="result-container">
+                <hr />
+                <h4><span>It's a <strong>{{ prediction }}</strong> Review</span></h4>
+                <div class="quote-text">
+                    <i class="fas fa-quote-left"></i>
+                    <span id="quote">{{ text }}</span>
+                    <i class="fas fa-quote-right"></i>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
