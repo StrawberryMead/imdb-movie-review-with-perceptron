@@ -104,3 +104,29 @@ body {
     width: 80%;
     border-radius: 10px;
 }
+
+.epoch-container {
+    font-size: 0.8rem;
+    padding: 10px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+th, td {
+    text-align: left;
+    padding: 8px;
+    white-space: nowrap;
+}
+
+th {
+    background-color: #eee;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

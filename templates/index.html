@@ -32,6 +32,39 @@
                     <i class="fas fa-quote-right"></i>
                 </div>
             </div>
+            <div class="epoch-container">
+                <h3>Training epochs:</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Epoch</th>
+                            <th>Input</th>
+                            <th>Weight</th>
+                            <th>Bias</th>
+                            <th>Target</th>
+                            <th>Net</th>
+                            <th>Output</th>
+                            <th>Loss</th>
+                            <th>Accuracy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for epoch in epochs %}
+                        <tr>
+                            <td>{{ epoch.epoch }}</td>
+                            <td>{{ epoch.input }}</td>
+                            <td>{{ epoch.weights }}</td>
+                            <td>{{ epoch.bias }}</td>
+                            <td>{{ epoch.target }}</td>
+                            <td>{{ epoch.net }}</td>
+                            <td>{{ epoch.output }}</td>
+                            <td>{{ epoch.loss }}</td>
+                            <td>{{ epoch.accuracy }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         {% endif %}
     </div>
 </body>
